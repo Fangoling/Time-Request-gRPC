@@ -12,12 +12,9 @@ service Time {
 }
 
 message TimeItem{
-  int32 id = 1;
-  string text = 2;
-  int32 hour = 3;
-  int32 minute = 4;
+  string time = 1;
 }
 
 message TimeRequestItem{
-  int32 id = 1;
+  string timeZone = 1;
 }

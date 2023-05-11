@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.example.time.protos;
+
+option java_multiple_files = true;
+option java_outer_classname = "TimeProtos";
+
+service Time {
+
+  rpc requestTime(TimeRequestItem) returns (TimeItem);
+
+}
+
+message TimeItem{
+  int32 id = 1;
+  string text = 2;
+  int32 hour = 3;
+  int32 minute = 4;
+}
+
+message TimeRequestItem{
+  int32 id = 1;
+}
